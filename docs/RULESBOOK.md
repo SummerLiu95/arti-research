@@ -19,3 +19,4 @@
 - FastAPI 测试要用 SQLite 时，JSONB 列写成 `JSON().with_variant(JSONB, "postgresql")`，生产 PG、测试 SQLite 两不误
 - Vitest 配置写进 vite.config.ts 时，`defineConfig` 必须从 `vitest/config` 导入，否则 TS 报 `test` 属性不存在
 - Dockerfile 里的包管理器必须与实际 lock 文件一致（package-lock.json ↔ npm ci）
+- Cytoscape 的节点与边共用全局唯一 id 命名空间：边 id 与节点 id 碰撞会**静默丢边**（无报错）。两侧 id 分别加 `n`/`e` 前缀，关联业务 id 放 data 字段
