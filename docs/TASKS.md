@@ -8,9 +8,9 @@
 
 ## M0 项目骨架
 
-- [ ] T0.1 monorepo 初始化：目录结构（pipeline/api/cli/web/data）、Makefile、.gitignore、.env.example
-- [ ] T0.2 docker-compose.yml：db(PostgreSQL) + api + web 三服务
-- [ ] T0.3 README 初版：研究对象声明、启动命令、合规声明、AI 使用声明
+- [x] T0.1 monorepo 初始化：目录结构（pipeline/api/cli/web/data）、Makefile、.gitignore、.env.example
+- [x] T0.2 docker-compose.yml：db(PostgreSQL) + api + web 三服务
+- [x] T0.3 README 初版：研究对象声明、启动命令、合规声明、AI 使用声明
 
 ## M1 数据模型与数据库
 

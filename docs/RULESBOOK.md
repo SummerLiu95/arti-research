@@ -10,4 +10,4 @@
 
 ## 经验
 
-（暂无，随开发补充）
+- docker-compose 的 `env_file` 指向不存在的文件时整个配置校验失败；骨架/开源仓库场景应写 `env_file: [{path: .env, required: false}]`
