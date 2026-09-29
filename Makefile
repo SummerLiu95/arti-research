@@ -14,6 +14,9 @@ extract: ## LLM 结构化抽取（产草稿）
 resolve: ## 实体消歧
 	.venv/bin/python -m pipeline.resolve.run
 
+review: ## 人工复核并入库（批量：make review ARGS="--approve-all"）
+	.venv/bin/python -m pipeline.review.run $(ARGS)
+
 score: ## 评分引擎（可复算）
 	.venv/bin/python -m pipeline.scoring.run
 

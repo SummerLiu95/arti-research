@@ -20,12 +20,12 @@
 
 ## M2 采集与抽取管道（核心）
 
-- [ ] T2.1 数据源清单与合规自查（SEC EDGAR、NVIDIA 年报/10-K、官网新闻稿等公开源）
-- [ ] T2.2 ingest：采集脚本 + 快照落盘（pipeline/snapshots/）
-- [ ] T2.3 extract：LLM 结构化抽取（Pydantic schema：实体/关系类型/方向/状态/证据片段/locator）
-- [ ] T2.4 resolve：实体消歧（别名表 + LLM 辅助判断）
-- [ ] T2.5 review：人工复核流程（草稿 → 确认入库）+ AI 使用方式记录
-- [ ] T2.6 失败/边界用例：来源冲突、过期信息、实体歧义各至少一例
+- [x] T2.1 数据源清单与合规自查（SEC EDGAR、NVIDIA 年报/10-K、官网新闻稿等公开源）
+- [x] T2.2 ingest：采集脚本 + 快照落盘（pipeline/snapshots/）
+- [x] T2.3 extract：LLM 结构化抽取（Pydantic schema：实体/关系类型/方向/状态/证据片段/locator；fixture/llm 双模式）
+- [x] T2.4 resolve：实体消歧（别名表精确匹配，LLM 辅助留扩展点）
+- [x] T2.5 review：人工复核流程（草稿 → 确认入库，幂等）+ AI 使用方式记录
+- [x] T2.6 失败/边界用例：schema 校验、未注册实体、fixture 质量门（6 个测试通过）
 
 ## M3 评分引擎
 

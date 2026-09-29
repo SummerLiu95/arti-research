@@ -8,3 +8,4 @@ pydantic-settings
 httpx
 typer
 pytest
+openai  # 仅 extract 的 LLM 模式使用；fixture 模式不依赖

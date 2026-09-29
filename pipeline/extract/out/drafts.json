@@ -1,0 +1,90 @@
+[
+  {
+    "from_entity": "TSMC",
+    "to_entity": "NVIDIA",
+    "type": "supplier",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We utilize suppliers such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, to manufacture our semiconductor wafers.",
+    "locator": "10-K Item 1 Business — Manufacturing",
+    "confidence": 0.98,
+    "note": "NVIDIA 无自有晶圆厂，TSMC 为其核心代工伙伴"
+  },
+  {
+    "from_entity": "SK Hynix",
+    "to_entity": "NVIDIA",
+    "type": "supplier",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products, including high-bandwidth memory (HBM) for our data center GPUs.",
+    "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+    "confidence": 0.95,
+    "note": "HBM 是数据中心 GPU 关键部件"
+  },
+  {
+    "from_entity": "Micron",
+    "to_entity": "NVIDIA",
+    "type": "supplier",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products.",
+    "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+    "confidence": 0.95,
+    "note": null
+  },
+  {
+    "from_entity": "Samsung",
+    "to_entity": "NVIDIA",
+    "type": "supplier",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products.",
+    "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+    "confidence": 0.92,
+    "note": null
+  },
+  {
+    "from_entity": "Microsoft",
+    "to_entity": "NVIDIA",
+    "type": "customer",
+    "status": "inferred",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "Sales to customers in the United States accounted for a significant portion of revenue; our largest end customers include major cloud service providers.",
+    "locator": "10-K Item 1 Business — Customers / Revenue concentration",
+    "confidence": 0.8,
+    "note": "10-K 通常不点名具体 CSP，Microsoft Azure 为大客户属行业共识，状态记为 inferred"
+  },
+  {
+    "from_entity": "Amazon",
+    "to_entity": "NVIDIA",
+    "type": "customer",
+    "status": "inferred",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "Our largest end customers include major cloud service providers.",
+    "locator": "10-K Item 1 Business — Customers",
+    "confidence": 0.78,
+    "note": "AWS 为大客户属行业共识，10-K 未点名，状态记为 inferred"
+  },
+  {
+    "from_entity": "AMD",
+    "to_entity": "NVIDIA",
+    "type": "peer",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We face competition from companies such as Advanced Micro Devices, Inc., or AMD, and Intel Corporation in the GPU and accelerated computing markets.",
+    "locator": "10-K Item 1 Business — Competition",
+    "confidence": 0.98,
+    "note": null
+  },
+  {
+    "from_entity": "Intel",
+    "to_entity": "NVIDIA",
+    "type": "peer",
+    "status": "confirmed",
+    "source_id": "nvda_10k_latest",
+    "excerpt": "We face competition from companies such as Advanced Micro Devices, Inc., or AMD, and Intel Corporation.",
+    "locator": "10-K Item 1 Business — Competition",
+    "confidence": 0.98,
+    "note": null
+  }
+]

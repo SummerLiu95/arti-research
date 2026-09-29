@@ -11,3 +11,6 @@
 ## 经验
 
 - docker-compose 的 `env_file` 指向不存在的文件时整个配置校验失败；骨架/开源仓库场景应写 `env_file: [{path: .env, required: false}]`
+- SEC EDGAR：`www.sec.gov/Archives` 严格校验 User-Agent（需带可联系身份信息，否则 403），且路径中 CIK 必须去前导零（否则 301）；`data.sec.gov` 的 JSON API 相对宽松
+- 管道入库必须先按唯一约束查再插（get-or-create + 证据去重），保证可重跑幂等
+- pytest 找不到项目包时，用 pyproject.toml 的 `[tool.pytest.ini_options] pythonpath = ["."]` 解决
