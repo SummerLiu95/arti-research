@@ -14,9 +14,9 @@
 
 ## M1 数据模型与数据库
 
-- [ ] T1.1 SQLAlchemy 模型：entity / relationship / evidence（见 ARCHITECTURE.md §5）
-- [ ] T1.2 Alembic 迁移 + docker-compose 内 db 初始化
-- [ ] T1.3 种子数据脚本（开发用假数据，打通前后端）
+- [x] T1.1 SQLAlchemy 模型：entity / relationship / evidence（见 ARCHITECTURE.md §5）
+- [x] T1.2 Alembic 迁移 + docker-compose 内 db 初始化
+- [x] T1.3 种子数据脚本（开发用假数据，打通前后端）
 
 ## M2 采集与抽取管道（核心）
 
