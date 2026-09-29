@@ -8,8 +8,11 @@
 import enum
 from datetime import datetime, timezone
 
-from sqlalchemy import CheckConstraint, ForeignKey, String, Text, UniqueConstraint
+from sqlalchemy import CheckConstraint, ForeignKey, JSON, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import JSONB
+
+# Postgres 用 JSONB，SQLite（测试）退回普通 JSON
+JSONBVariant = JSON().with_variant(JSONB, "postgresql")
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship as orm_relationship
 
 
@@ -38,7 +41,7 @@ class Entity(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(255), unique=True, index=True)
-    aliases: Mapped[list] = mapped_column(JSONB, default=list)  # 别名，用于消歧
+    aliases: Mapped[list] = mapped_column(JSONBVariant, default=list)  # 别名，用于消歧
     ticker: Mapped[str | None] = mapped_column(String(32), index=True)  # 证券标识，如 NASDAQ:NVDA
     is_listed: Mapped[bool] = mapped_column(default=False)
     description: Mapped[str | None] = mapped_column(Text)
@@ -67,7 +70,7 @@ class Relationship(Base):
     type: Mapped[RelationType] = mapped_column(String(32), index=True)
     status: Mapped[RelationStatus] = mapped_column(String(16), default=RelationStatus.confirmed)
     relevance_score: Mapped[float | None] = mapped_column()  # 0–100，评分引擎写入
-    score_breakdown: Mapped[dict | None] = mapped_column(JSONB)  # 评分因子明细
+    score_breakdown: Mapped[dict | None] = mapped_column(JSONBVariant)  # 评分因子明细
     valid_from: Mapped[datetime | None] = mapped_column()  # 时效：关系起始
     valid_to: Mapped[datetime | None] = mapped_column()    # 时效：关系终止（None=仍有效）
     notes: Mapped[str | None] = mapped_column(Text)
