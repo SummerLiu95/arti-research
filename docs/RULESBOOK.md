@@ -20,3 +20,4 @@
 - Vitest 配置写进 vite.config.ts 时，`defineConfig` 必须从 `vitest/config` 导入，否则 TS 报 `test` 属性不存在
 - Dockerfile 里的包管理器必须与实际 lock 文件一致（package-lock.json ↔ npm ci）
 - Cytoscape 的节点与边共用全局唯一 id 命名空间：边 id 与节点 id 碰撞会**静默丢边**（无报错）。两侧 id 分别加 `n`/`e` 前缀，关联业务 id 放 data 字段
+- Cytoscape 背景图对无 `width/height` 属性的 SVG（如 Simple Icons）无法计算宽高比，`background-fit: contain` 会失效导致图片溢出节点——先给 SVG 补上尺寸属性；要"保比例 + 不裁剪"就用圆角矩形节点 + contain + padding 安全边，不要圆形裁剪

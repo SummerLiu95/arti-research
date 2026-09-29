@@ -18,7 +18,13 @@ interface Props {
 /** 把 API 图数据转为 cytoscape 元素。节点/边 id 必须全局唯一（加 n/e 前缀），否则边会被静默丢弃。 */
 export function buildElements(graph: Graph) {
   return [
-    ...graph.nodes.map((n) => ({ data: { id: `n${n.id}`, label: n.label } })),
+    ...graph.nodes.map((n) => ({
+      data: {
+        id: `n${n.id}`,
+        label: n.label,
+        logo: `/logos/${n.label.toLowerCase().replace(/\s+/g, '-')}.svg`,
+      },
+    })),
     ...graph.edges.map((e) => ({
       data: {
         id: `e${e.id}`,
@@ -47,7 +53,15 @@ export default function GraphView({ graph, onSelectEdge }: Props) {
           selector: 'node',
           style: {
             label: 'data(label)',
-            'background-color': '#0f172a',
+            shape: 'round-rectangle',    // 方形节点，logo 统一大小显示，不做圆形裁剪
+            'background-image': 'data(logo)',
+            'background-fit': 'contain', // 保持 logo 原始宽高比，在节点内居中
+            padding: '5px',              // 安全边距，logo 不顶节点边
+            'background-color': '#ffffff',
+            'border-width': 1.5,
+            'border-color': '#e2e8f0',
+            width: 56,
+            height: 56,
             color: '#0f172a',
             'font-size': 11,
             'text-valign': 'bottom',
