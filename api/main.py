@@ -26,7 +26,7 @@ app = FastAPI(title="ARTi NVIDIA Supply Chain Research API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite dev server
+    allow_origins=["http://localhost:5173", "http://localhost:3000"],  # 5173=compose nginx, 3000=Vite dev
     allow_methods=["GET"],
     allow_headers=["*"],
 )
