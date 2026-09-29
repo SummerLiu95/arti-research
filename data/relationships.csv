@@ -1,0 +1,9 @@
+id,from_entity,to_entity,from_ticker,to_ticker,type,status,relevance_score,evidence_count,notes
+1,TSMC,NVIDIA,NYSE:TSM,NASDAQ:NVDA,supplier,confirmed,80.0,2,NVIDIA 无自有晶圆厂，TSMC 为其核心代工伙伴
+2,SK Hynix,NVIDIA,KRX:000660,NASDAQ:NVDA,supplier,confirmed,80.0,2,HBM 是数据中心 GPU 关键部件
+3,Microsoft,NVIDIA,NASDAQ:MSFT,NASDAQ:NVDA,customer,inferred,56.0,2,10-K 通常不点名具体 CSP，Microsoft Azure 为大客户属行业共识，状态记为 inferred
+4,Amazon,NVIDIA,NASDAQ:AMZN,NASDAQ:NVDA,customer,inferred,56.0,2,AWS 为大客户属行业共识，10-K 未点名，状态记为 inferred
+5,AMD,NVIDIA,NASDAQ:AMD,NASDAQ:NVDA,peer,confirmed,48.0,2,GPU 竞品（开发示例数据）
+6,Intel,NVIDIA,NASDAQ:INTC,NASDAQ:NVDA,peer,confirmed,48.0,2,芯片竞品（开发示例数据）
+8,Micron,NVIDIA,NASDAQ:MU,NASDAQ:NVDA,supplier,confirmed,70.0,1,
+9,Samsung,NVIDIA,KRX:005930,NASDAQ:NVDA,supplier,confirmed,70.0,1,

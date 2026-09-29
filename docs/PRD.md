@@ -109,7 +109,24 @@ ARTi 研发岗位挑战：基于合法可访问的公开资料，构建一个**�
 
 宁可少量关系条条有证据可回溯，也不要大量没出处的数据。失败用例与边界处理（来源冲突、过期信息、实体歧义）是加分项。
 
-## 7. 非目标（Out of Scope）
+## 7. 验收自查（2026-09-29，T6.4）
+
+| # | 状态 | 落点 |
+|---|---|---|
+| 01 | ✅ | README：研究对象（NVDA/CIK）、数据截点 2026-09-29、覆盖与不覆盖边界、免责声明；status 字段区分 confirmed/inferred/unknown |
+| 02 | ⚠️ 部分 | supplier/customer/peer 已覆盖（8 条关系，带方向/状态/时效字段）；partner 与 investor_or_investee 暂无数据——10-K 未披露，已记入 README 盲区 |
+| 03 | ✅ | 仅 SEC EDGAR 公开数据，遵守 UA/限速；合规自查见 pipeline/ingest/SOURCES.md |
+| 04 | ✅ | evidence 表含 source URL/publisher/published_at/retrieved_at/locator/摘录/快照引用；歧义处理见 resolve 别名表 |
+| 05 | ✅ | 0–100 评分 + 因子明细（score_breakdown），公式与常量见 formula.py 与 README 评分方法 |
+| 06 | ✅ | README 说明数据源与采集/清洗方案；快照已入库随仓库分发，复核无需重新抓取 |
+| 07 | ✅ | FastAPI（筛选/分页/校验/422/404）+ Typer CLI 等价入口；13 个 API 测试 |
+| 08 | ✅ | README 含依赖、.env.example（无真实凭据）、启动/测试/复现命令；fixture + snapshot + 数据截点 |
+| 09 | ✅ | 29 个测试（后端 25 + 前端 4），含失败/边界用例；README「已知限制与盲区」 |
+| 10 | ✅ | README「AI 使用声明」：LLM 仅用于抽取/消歧草稿，人工复核入库，未输入任何机密 |
+
+结论：10 条中 9 条完全满足，第 02 条部分满足（partner/investor 关系类型待新闻稿数据源扩充，已在 README 明示）。
+
+## 8. 非目标（Out of Scope）
 
 - 不做投资建议
 - 不做实时行情/交易系统

@@ -1,0 +1,329 @@
+{
+  "subject": {
+    "name": "NVIDIA Corporation",
+    "ticker": "NASDAQ:NVDA",
+    "cik": "0001045810"
+  },
+  "data_cutoff": "2026-09-29",
+  "disclaimer": "仅供技术研究，不构成投资建议",
+  "relationships": [
+    {
+      "id": 1,
+      "from_entity": "TSMC",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NYSE:TSM",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "supplier",
+      "status": "confirmed",
+      "relevance_score": 80.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 1.0,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "NVIDIA 无自有晶圆厂，TSMC 为其核心代工伙伴",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.532050+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：晶圆代工（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Manufacturing",
+          "excerpt": "We utilize suppliers such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, to manufacture our semiconductor wafers.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "from_entity": "SK Hynix",
+      "to_entity": "NVIDIA",
+      "from_ticker": "KRX:000660",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "supplier",
+      "status": "confirmed",
+      "relevance_score": 80.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 1.0,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "HBM 是数据中心 GPU 关键部件",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.536937+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：HBM 内存供应（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+          "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products, including high-bandwidth memory (HBM) for our data center GPUs.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "from_entity": "Microsoft",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NASDAQ:MSFT",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "customer",
+      "status": "inferred",
+      "relevance_score": 56.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 0.7,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "10-K 通常不点名具体 CSP，Microsoft Azure 为大客户属行业共识，状态记为 inferred",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.539285+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：Azure 采购 GPU（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Customers / Revenue concentration",
+          "excerpt": "Sales to customers in the United States accounted for a significant portion of revenue; our largest end customers include major cloud service providers.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "from_entity": "Amazon",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NASDAQ:AMZN",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "customer",
+      "status": "inferred",
+      "relevance_score": 56.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 0.7,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "AWS 为大客户属行业共识，10-K 未点名，状态记为 inferred",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.541573+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：AWS 采购 GPU（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Customers",
+          "excerpt": "Our largest end customers include major cloud service providers.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "from_entity": "AMD",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NASDAQ:AMD",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "peer",
+      "status": "confirmed",
+      "relevance_score": 48.0,
+      "score_breakdown": {
+        "type_weight": 0.6,
+        "status_factor": 1.0,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "GPU 竞品（开发示例数据）",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.544606+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：GPU 竞品（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Competition",
+          "excerpt": "We face competition from companies such as Advanced Micro Devices, Inc., or AMD, and Intel Corporation in the GPU and accelerated computing markets.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "from_entity": "Intel",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NASDAQ:INTC",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "peer",
+      "status": "confirmed",
+      "relevance_score": 48.0,
+      "score_breakdown": {
+        "type_weight": 0.6,
+        "status_factor": 1.0,
+        "evidence_count": 2,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.8
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": "芯片竞品（开发示例数据）",
+      "evidences": [
+        {
+          "source_url": "https://example.com/placeholder",
+          "publisher": "示例来源（占位）",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T07:57:54.545524+00:00",
+          "locator": null,
+          "excerpt": "占位证据摘录：芯片竞品（开发示例数据）",
+          "access_note": "公开页面；开发占位数据，待 M2 管道替换为真实证据"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Competition",
+          "excerpt": "We face competition from companies such as Advanced Micro Devices, Inc., or AMD, and Intel Corporation.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "from_entity": "Micron",
+      "to_entity": "NVIDIA",
+      "from_ticker": "NASDAQ:MU",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "supplier",
+      "status": "confirmed",
+      "relevance_score": 70.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 1.0,
+        "evidence_count": 1,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.7
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": null,
+      "evidences": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+          "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "from_entity": "Samsung",
+      "to_entity": "NVIDIA",
+      "from_ticker": "KRX:005930",
+      "to_ticker": "NASDAQ:NVDA",
+      "type": "supplier",
+      "status": "confirmed",
+      "relevance_score": 70.0,
+      "score_breakdown": {
+        "type_weight": 1.0,
+        "status_factor": 1.0,
+        "evidence_count": 1,
+        "recency_factor": 1.0,
+        "latest_evidence_at": "2026-09-29T08:04:40.411433+00:00",
+        "independence_factor": 1.0,
+        "evidence_count_factor": 0.7
+      },
+      "valid_from": null,
+      "valid_to": null,
+      "notes": null,
+      "evidences": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "publisher": "SEC EDGAR",
+          "published_at": null,
+          "retrieved_at": "2026-09-29T08:04:40.411433+00:00",
+          "locator": "10-K Item 1 Business — Manufacturing / Suppliers",
+          "excerpt": "We purchase memory from SK Hynix, Micron, and Samsung for use in our products.",
+          "access_note": "SEC EDGAR 公开文件"
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,9 @@ score: ## 评分引擎（可复算）
 seed: ## 写入种子数据
 	.venv/bin/python -m pipeline.seed
 
+export: ## 导出交付数据集（data/）
+	.venv/bin/python -m pipeline.export
+
 api: ## 本地启动 FastAPI
 	.venv/bin/uvicorn api.main:app --reload --port 8000
 

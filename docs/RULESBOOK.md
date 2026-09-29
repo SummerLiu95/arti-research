@@ -18,3 +18,4 @@
 - ORM 双向公司匹配不能用 union 拼 Query，应双别名 join + or_
 - FastAPI 测试要用 SQLite 时，JSONB 列写成 `JSON().with_variant(JSONB, "postgresql")`，生产 PG、测试 SQLite 两不误
 - Vitest 配置写进 vite.config.ts 时，`defineConfig` 必须从 `vitest/config` 导入，否则 TS 报 `test` 属性不存在
+- Dockerfile 里的包管理器必须与实际 lock 文件一致（package-lock.json ↔ npm ci）
