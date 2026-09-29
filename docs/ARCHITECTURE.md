@@ -42,7 +42,7 @@
 | 评分 | 纯 Python 公式：时效衰减 × 证据独立性 × 关系类型权重 | 透明可复算，不用 LLM |
 | API | FastAPI + Pydantic | 自动 OpenAPI 文档，校验天然 |
 | CLI | Typer | 与 API 共享 service 层 |
-| 前端 | React 19 + Vite + TypeScript + pnpm | 行业主流脚手架（vite create） |
+| 前端 | React 19 + Vite + TypeScript + npm（webapp-building skill 脚手架） | 40+ shadcn/ui 组件预装 |
 | 前端 UI | shadcn/ui + Tailwind CSS | 快速出专业界面 |
 | 关系图 | Cytoscape.js（或 React Flow） | 节点/边交互成熟 |
 | 测试 | pytest（后端）+ Vitest（前端关键组件） | 关键路径 + 边界用例 |

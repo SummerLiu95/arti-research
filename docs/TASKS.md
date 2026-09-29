@@ -42,11 +42,11 @@
 
 ## M5 前端
 
-- [ ] T5.1 `pnpm create vite` 脚手架 + TS + Tailwind + shadcn/ui
-- [ ] T5.2 关系图视图：Cytoscape.js（节点=公司带评分，边=关系带类型/方向）
-- [ ] T5.3 关系列表：筛选、排序、分页
-- [ ] T5.4 详情抽屉：证据链展开 + 评分构成拆解
-- [ ] T5.5 Vitest 关键组件测试
+- [x] T5.1 `npm create vite` 脚手架（webapp-building skill）+ TS + Tailwind + shadcn/ui
+- [x] T5.2 关系图视图：Cytoscape.js（节点=公司带评分，边=关系带类型/方向）
+- [x] T5.3 关系列表：筛选、排序、分页
+- [x] T5.4 详情抽屉：证据链展开 + 评分构成拆解
+- [x] T5.5 Vitest 关键组件测试（4 用例）
 
 ## M6 交付收尾
 

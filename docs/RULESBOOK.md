@@ -17,3 +17,4 @@
 - SQLAlchemy 用 String 列存 str-Enum 时读出是纯字符串，消费 `.value` 前需判断类型
 - ORM 双向公司匹配不能用 union 拼 Query，应双别名 join + or_
 - FastAPI 测试要用 SQLite 时，JSONB 列写成 `JSON().with_variant(JSONB, "postgresql")`，生产 PG、测试 SQLite 两不误
+- Vitest 配置写进 vite.config.ts 时，`defineConfig` 必须从 `vitest/config` 导入，否则 TS 报 `test` 属性不存在
